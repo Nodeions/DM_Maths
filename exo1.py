@@ -13,13 +13,12 @@ class function:
     
     def norme(self, u):
         return math.sqrt((u[0]**2 + u[1]**2 + u[2]**2))
-    
+
     def det(self, matrice):
 
         deltaOneOne = matrice[1][1]*matrice[2][2]-matrice[2][1]*matrice[1][2]
         deltaTwoOne = matrice[0][1]*matrice[2][2]-matrice[2][1]*matrice[0][2]
         deltaThreeOne = matrice[0][1]*matrice[1][2]-matrice[1][1]*matrice[0][2]
-
         
         return deltaOneOne+deltaTwoOne+deltaThreeOne
     
@@ -27,12 +26,12 @@ class function:
 
 def checkTransfo():
     if function.det != 1 or function.det != -1:
-        print("Pas isométrique")
+        print("Pas isometrique")
     else:
         if matrice[0][0] == 1 and matrice[1][1] == 1 and matrice[2][2] == 1:
-            print("Matrice identité")
+            print("Matrice identite")
         else:
-            #pas fini car pas sûr d'où je vais'
+            #pas fini car pas sur d'ou je vais'
             return 0
 
 
